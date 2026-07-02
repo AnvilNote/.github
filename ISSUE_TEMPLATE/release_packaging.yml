@@ -1,0 +1,83 @@
+name: Release / packaging issue
+description: Report a problem with a desktop install, installer, signing, notarization, or packaging
+title: "[Release]: "
+labels:
+  - release
+  - packaging
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for desktop release, installer, signing, notarization, Linux AppImage/deb, Windows installer, or macOS dmg/pkg issues. For other bugs, use the general bug report template.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS Intel
+        - macOS Apple Silicon
+        - Windows x64
+        - Linux x64
+        - Linux ARM64
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: package-format
+    attributes:
+      label: Package format
+      options:
+        - dmg
+        - pkg
+        - nsis
+        - deb
+        - AppImage
+        - source build
+        - other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Version number or build shown in the app or installer filename
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the install/packaging problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Installer output, console logs, crash reports, or screenshots of any error.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Anything else that might be relevant.
+    validations:
+      required: false

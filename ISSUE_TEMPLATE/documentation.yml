@@ -1,0 +1,38 @@
+name: Documentation
+description: Report unclear, missing, or incorrect documentation
+title: "[Docs]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for problems with docs, guides, or in-app help text — not for product bugs.
+  - type: input
+    id: location
+    attributes:
+      label: Repository or page
+      description: Which repository, file, or URL is this about?
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or missing?
+      description: Describe the gap, error, or confusing part.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested improvement
+      description: How would you rewrite or restructure it?
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Anything else that might help, e.g. links, screenshots.
+    validations:
+      required: false
